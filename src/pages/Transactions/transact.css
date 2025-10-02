@@ -1,0 +1,49 @@
+.Transactions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.Transactions-subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+}
+
+.Heading {
+  font-family: Roboto, sans-serif, system-ui;
+  font-weight: 700;
+  font-size: 25px;
+  color: #1aaf9f;
+}
+
+.Transaction-Catergories {
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  padding-block: 5px;
+  padding-left: 2px;
+  border-radius: 3px;
+}
+
+.Categories-subheading {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: Roboto, sans-serif, system-ui;
+  color: #1aaf9f;
+  background-color: white;
+  cursor: pointer;
+}
+
+.Categories-subheading:hover {
+  color: rgb(255, 238, 0);
+}
+
+.Transactions-Array-container {
+  background-color: white;
+  border-radius: 5px;
+  padding-inline: 10px;
+  padding-block: 10px;
+}

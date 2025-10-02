@@ -1,0 +1,195 @@
+/* DataSubscriptionPage.css */
+.data-page {
+  background-color: #0f172a;
+  color: white;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeInPage 1s ease;
+}
+
+.data-title,
+.plan-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.8s ease-in-out;
+}
+
+.data-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.6s ease;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #af65f5;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  background-color: #334155;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.input-group input:focus {
+  background-color: #475569;
+  outline: none;
+  transform: scale(1.03);
+}
+
+.network-detect {
+  margin-top: 0.5rem;
+  color: #24c2b0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.4s ease;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #4384f2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+  animation: fadeIn 1s ease;
+}
+
+.plan-card {
+  background-color: #1e293b;
+  padding: 1.2rem;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card:hover {
+  background-color: #334155;
+  transform: scale(1.05);
+}
+
+.plan-icon {
+  font-size: 2rem;
+  color: #f1aa1b;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #24c2b0;
+}
+
+.plan-card p {
+  margin: 0.5rem 0 0;
+  font-weight: bold;
+  color: #f1aa1b;
+}
+
+/* Animations */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .data-title,
+  .plan-title {
+    font-size: 2rem;
+  }
+
+  .data-form {
+    padding: 1.5rem;
+  }
+
+  .input-group input,
+  button[type="submit"] {
+    font-size: 1rem;
+  }
+
+  .network-detect {
+    font-size: 0.9rem;
+  }
+}

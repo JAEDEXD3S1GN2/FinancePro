@@ -1,0 +1,137 @@
+.settings-page {
+  display: flex;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Sidebar */
+.settings-sidebar {
+  width: 250px;
+  background: #162032;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: left;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar-button:hover,
+.sidebar-button.active {
+  background: #2563eb;
+}
+
+.sidebar-icon {
+  width: 24px;
+  height: 24px;
+  animation: rotate 6s linear infinite;
+  filter: drop-shadow(0 2px 5px #2563eb);
+}
+
+/* Main content */
+.settings-content {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #0f172a;
+}
+
+.settings-content h2 {
+  font-size: 1.8rem;
+  color: #eda217;
+  margin-bottom: 20px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-item label {
+  font-weight: bold;
+  color: #a758f2;
+}
+
+.setting-item input,
+.setting-item select {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.setting-item.toggle {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-secondary {
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 2px solid #3c7df1;
+  border-radius: 8px;
+  color: #3c7df1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #3c7df1;
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .settings-page {
+    flex-direction: column;
+  }
+
+  .settings-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-button {
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+
+  .settings-content {
+    padding: 20px;
+  }
+}

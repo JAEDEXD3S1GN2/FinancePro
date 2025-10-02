@@ -1,0 +1,128 @@
+/* InsurancePage.css */
+.insurance-page {
+  background-color: #0f172a;
+  color: white;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeInPage 1s ease;
+  min-height: 100vh;
+}
+
+.insurance-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #24c2b0;
+  animation: slideDown 0.8s ease-in-out;
+}
+
+.insurance-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #af65f5;
+  animation: fadeIn 1.2s ease;
+}
+
+.insurance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.insurance-card {
+  background-color: #1e293b;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: zoomIn 0.8s ease;
+  perspective: 1000px;
+}
+
+.insurance-card:hover {
+  transform: translateY(-5px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+.insure-icon-wrapper {
+  font-size: 2.5rem;
+  color: #f1aa1b;
+  margin-bottom: 1rem;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.insurance-card:hover .insure-icon-wrapper {
+  transform: scale(1.3) rotate(10deg);
+}
+
+.insurance-card h3 {
+  font-size: 1.5rem;
+  color: #4384f2;
+  margin-bottom: 0.5rem;
+}
+
+.insurance-card p {
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+/* Animations */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .insurance-title {
+    font-size: 2rem;
+  }
+
+  .insurance-description {
+    font-size: 1rem;
+  }
+
+  .insure-icon-wrapper {
+    font-size: 2rem;
+  }
+}

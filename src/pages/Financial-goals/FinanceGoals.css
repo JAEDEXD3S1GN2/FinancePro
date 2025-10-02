@@ -1,0 +1,131 @@
+/* FinancialGoalsPage.css */
+.goals-page {
+  background-color: #0f172a;
+  color: white;
+  padding: 2.5rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  animation: fadeInPage 1s ease forwards;
+}
+
+.goals-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #24c2b0;
+  animation: slideDown 1s ease forwards;
+}
+
+.goals-description {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.25rem;
+  color: #af65f5;
+  text-align: center;
+  animation: fadeIn 1.3s ease forwards;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+  padding: 0 1rem;
+}
+
+.goal-card {
+  background-color: #1e293b;
+  padding: 2.2rem 1.5rem;
+  border-radius: 22px;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: zoomIn 0.9s ease forwards;
+  perspective: 1000px;
+  outline-offset: 5px;
+}
+
+.goal-card:hover,
+.goal-card:focus {
+  transform: translateY(-10px) scale(1.07) rotateX(7deg);
+  box-shadow: 0 28px 38px rgba(0, 0, 0, 0.55);
+  outline: none;
+}
+
+.goal-icon {
+  font-size: 3.2rem;
+  color: #f1aa1b;
+  margin-bottom: 1.1rem;
+  transition: transform 0.35s ease;
+}
+
+.goal-card:hover .goal-icon,
+.goal-card:focus .goal-icon {
+  transform: scale(1.4) rotate(14deg);
+}
+
+.goal-card h3 {
+  font-size: 1.6rem;
+  color: #4384f2;
+  margin-bottom: 0.7rem;
+}
+
+.goal-card p {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+}
+
+/* Animations */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .goals-title {
+    font-size: 2.2rem;
+  }
+  .goals-description {
+    font-size: 1rem;
+  }
+  .goal-icon {
+    font-size: 2.6rem;
+  }
+}

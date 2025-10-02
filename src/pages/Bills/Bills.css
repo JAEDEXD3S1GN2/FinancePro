@@ -1,0 +1,131 @@
+/* BillsPage.css */
+.bills-page {
+  background-color: #0f172a;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  animation: fadeInPage 1s ease forwards;
+}
+
+.bills-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: #24c2b0;
+  animation: slideDown 0.9s ease forwards;
+}
+
+.bills-description {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.25rem;
+  color: #af65f5;
+  text-align: center;
+  animation: fadeIn 1.1s ease forwards;
+}
+
+.bills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.bill-card {
+  background-color: #1e293b;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: zoomIn 0.8s ease forwards;
+  perspective: 800px;
+  outline-offset: 4px;
+}
+
+.bill-card:hover,
+.bill-card:focus {
+  transform: translateY(-8px) scale(1.06) rotateX(6deg);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.bill-icon {
+  font-size: 3rem;
+  color: #f1aa1b;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.bill-card:hover .bill-icon,
+.bill-card:focus .bill-icon {
+  transform: scale(1.3) rotate(12deg);
+}
+
+.bill-card h3 {
+  font-size: 1.5rem;
+  color: #4384f2;
+  margin-bottom: 0.5rem;
+}
+
+.bill-card p {
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+/* Animations */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bills-title {
+    font-size: 2.2rem;
+  }
+  .bills-description {
+    font-size: 1rem;
+  }
+  .bill-icon {
+    font-size: 2.5rem;
+  }
+}
